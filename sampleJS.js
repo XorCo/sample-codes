@@ -4,7 +4,7 @@
 * @description	Returns the margins, width and height of a picture and its draggable area
 * @param 		link(String) 	- source of the image ex: http://www.example.com/image.jpg
 * @param		result(JSON) 	- json object containing the results
-* @usage		pollCreation.js
+* @use			pollCreation.js
 */
 function getImageProperties(link,result)
 {
