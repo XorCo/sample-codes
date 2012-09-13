@@ -1,21 +1,21 @@
 /**
-* @author 		XorCo
-* @date			07.27.2012
+* @author 	XorCo
+* @date		07.27.2012
 * @description	Returns the margins, width and height of a picture and its draggable area
-* @param 		link(String) 	- source of the image ex: http://www.example.com/image.jpg
-* @param		result(JSON) 	- json object containing the results
-* @use			pollCreation.js
+* @param 	link(String) 	- source of the image ex: http://www.example.com/image.jpg
+* @param	result(JSON) 	- json object containing the results
+* @use		pollCreation.js
 */
 function getImageProperties(link,result)
 {
 	var img = new Image();
 	img.onload = function() {
-		var default_width 		= _defaultWidth;				// GLOBAL(config.js) - Width of the standard thumbnail
-		var default_height 		= _defaultHeight;				// GLOBAL(config.js) - Height of the standard thumbnail
+		var default_width 		= _defaultWidth;		// GLOBAL(config.js) - Width of the standard thumbnail
+		var default_height 		= _defaultHeight;		// GLOBAL(config.js) - Height of the standard thumbnail
 		var appropriate_width 	= _defaultAppropriateWidth;		// GLOBAL(config.js) - Width of appropriate draggable area
-		var appropriate_height 	= _defaultAppropriateHeight;	// GLOBAL(config.js) - Height of appropriate draggable area
-		var picture_width 		= this.width;					// Width of the input picture
-		var picture_height 		= this.height;					// Height of the input picture
+		var appropriate_height 	= _defaultAppropriateHeight;		// GLOBAL(config.js) - Height of appropriate draggable area
+		var picture_width 		= this.width;			// Width of the input picture
+		var picture_height 		= this.height;			// Height of the input picture
 
 		// We give an already appropriate size to the image
 		var horizontal_difference 	= picture_width  - appropriate_width;
