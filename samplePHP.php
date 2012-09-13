@@ -2,30 +2,30 @@
 /**
 * @author 		XorCo
 * @date			31.27.2012
-* @description	Deals with the loading, uploading, resizing and display of the picture
+* @description		Deals with the loading, uploading, resizing and display of the picture
 * @use			poll.js, polls.js, createPoll.js, auxiliary.js
 */
 class Picture
 {
-	private $name;					// Name of the picture. Example: image.jpg
-	private $link;					// Source of the image. Example: http://www.example.com/image.jpg
-	private $width;					// Width in pixels of the image
-	private $height;				// Height in pixels of the image
+	private $name;				// Name of the picture. Example: image.jpg
+	private $link;				// Source of the image. Example: http://www.example.com/image.jpg
+	private $width;				// Width in pixels of the image
+	private $height;			// Height in pixels of the image
 	private $marginLeft;			// MarginLeft to center the image relative to the thumbnail
-	private $marginTop;				// MarginTop to center the image relative to the thumbnail
-	private $type;					// According to the size of display of the picture. Possible values: icon, thumb or picture
-	private $location;				// Folder of the current picture
+	private $marginTop;			// MarginTop to center the image relative to the thumbnail
+	private $type;				// According to the size of display of the picture. Possible values: icon, thumb or picture
+	private $location;			// Folder of the current picture
 	private $thumbSizeX;			// The thumbnail has a fixed size which is determined by its width: thumbSizeX and height: thumbSizeY
 	private $thumbSizeY;			// Warning: the thumbnail represents the frame of the picture but may have different size and format than the picture itself
 	private $appropriate_width;		// Width of the draggable area
-	private $appropriate_height;	// Height of the draggable area
+	private $appropriate_height;		// Height of the draggable area
   
 	/**
 	* @description	Depending on the $source, the picture is going to be uploaded and/or resized.
-	* @param		$source(String) 				- Example: http://www.example.com/image.jpg or /image.jpg
-	* @param		$type("icon","thumb","picture")	- Determines the frame of the picture
-	* @param		$appropriate_width/height		- Size of the draggable area
-	* @param		$marginLeft/Top					- Margin of the picture relative to its frame
+	* @param	$source(String) 		- Example: http://www.example.com/image.jpg or /image.jpg
+	* @param	$type("icon","thumb","picture")	- Determines the frame of the picture
+	* @param	$appropriate_width/height	- Size of the draggable area
+	* @param	$marginLeft/Top			- Margin of the picture relative to its frame
 	*/
   	public function Picture($source=NULL,$type=NULL,$appropriate_width=0,$appropriate_height=0,$marginLeft=0,$marginTop=0)
   	{
@@ -143,8 +143,8 @@ class Picture
 	
 	/**
 	* @description	Creates an image of a certain size
-	* @param		$thumbSize("icon","thumb","picture") - Determines the size of the picture
-	* @param		$keepOriginal(boolean)				 - Determines if original must be deleted or not
+	* @param	$thumbSize("icon","thumb","picture") 	- Determines the size of the picture
+	* @param	$keepOriginal(boolean)			- Determines if original must be deleted or not
 	*/
   	public function createImage($thumbSize,$keepOriginal=false)
   	{
@@ -230,8 +230,8 @@ class Picture
 	
 	/**
 	* @description	Picture is being copied in the right directory
-	* @param		$source(String) - Example: http://www.example.com/
-	* @output		link of the saved picture
+	* @param	$source(String) - Example: http://www.example.com/
+	* @output	link of the saved picture
 	*/
 	public function save($source)
 	{
